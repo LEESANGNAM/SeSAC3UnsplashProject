@@ -27,6 +27,12 @@
 		D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2772AB02ABE00079CDA /* APIKey.swift */; };
 		D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2792AB02B5B00079CDA /* PhotoViewController.swift */; };
 		D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF27B2AB02DAC00079CDA /* PhotoViewModel.swift */; };
+		D6ACF27F2AB0A34500079CDA /* NetflixLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF27E2AB0A34500079CDA /* NetflixLoginViewController.swift */; };
+		D6ACF2822AB0A3D100079CDA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6ACF2812AB0A3D100079CDA /* SnapKit */; };
+		D6ACF2842AB0A6DE00079CDA /* GrayBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2832AB0A6DE00079CDA /* GrayBackgroundTextField.swift */; };
+		D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */; };
+		D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */; };
+		D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28A2AB0A8D600079CDA /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,11 @@
 		D6ACF2772AB02ABE00079CDA /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		D6ACF2792AB02B5B00079CDA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		D6ACF27B2AB02DAC00079CDA /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		D6ACF27E2AB0A34500079CDA /* NetflixLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixLoginViewController.swift; sourceTree = "<group>"; };
+		D6ACF2832AB0A6DE00079CDA /* GrayBackgroundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayBackgroundTextField.swift; sourceTree = "<group>"; };
+		D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBackgroundButton.swift; sourceTree = "<group>"; };
+		D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixLoginView.swift; sourceTree = "<group>"; };
+		D6ACF28A2AB0A8D600079CDA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6ACF2822AB0A3D100079CDA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +105,8 @@
 		D63FA3FA2AAE992F00871FDE /* SeSAC3UnsplashProject */ = {
 			isa = PBXGroup;
 			children = (
+				D6ACF2892AB0A8C300079CDA /* Base */,
+				D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */,
 				D6ACF2702AB02A3F00079CDA /* Photo */,
 				D6ACF2652AAFED4300079CDA /* Login */,
 				D63FA3FB2AAE992F00871FDE /* AppDelegate.swift */,
@@ -134,6 +148,25 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF27E2AB0A34500079CDA /* NetflixLoginViewController.swift */,
+				D6ACF2832AB0A6DE00079CDA /* GrayBackgroundTextField.swift */,
+				D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */,
+				D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */,
+			);
+			path = LoginNetflix;
+			sourceTree = "<group>";
+		};
+		D6ACF2892AB0A8C300079CDA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF28A2AB0A8D600079CDA /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +183,9 @@
 			dependencies = (
 			);
 			name = SeSAC3UnsplashProject;
+			packageProductDependencies = (
+				D6ACF2812AB0A3D100079CDA /* SnapKit */,
+			);
 			productName = SeSAC3UnsplashProject;
 			productReference = D63FA3F82AAE992F00871FDE /* SeSAC3UnsplashProject.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +216,9 @@
 				ja,
 			);
 			mainGroup = D63FA3EF2AAE992F00871FDE;
+			packageReferences = (
+				D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D63FA3F92AAE992F00871FDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,15 +252,20 @@
 				D63FA41D2AAEBAB800871FDE /* String+Extension.swift in Sources */,
 				D63FA4002AAE992F00871FDE /* ViewController.swift in Sources */,
 				D63FA3FC2AAE992F00871FDE /* AppDelegate.swift in Sources */,
+				D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */,
 				D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */,
+				D6ACF2842AB0A6DE00079CDA /* GrayBackgroundTextField.swift in Sources */,
 				D6ACF2742AB02A6100079CDA /* APIService.swift in Sources */,
 				D6ACF2722AB02A4900079CDA /* Photo.swift in Sources */,
 				D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */,
+				D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */,
 				D63FA3FE2AAE992F00871FDE /* SceneDelegate.swift in Sources */,
 				D6ACF26D2AB0015600079CDA /* SampleViewModel.swift in Sources */,
 				D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */,
 				D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */,
 				D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */,
+				D6ACF27F2AB0A34500079CDA /* NetflixLoginViewController.swift in Sources */,
+				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
 				D6ACF26F2AB00E4000079CDA /* LoginViewModel.swift in Sources */,
 				D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */,
 			);
@@ -468,6 +512,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6ACF2812AB0A3D100079CDA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D63FA3F02AAE992F00871FDE /* Project object */;
 }
