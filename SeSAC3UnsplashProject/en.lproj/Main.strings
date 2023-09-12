@@ -1,0 +1,29 @@
+
+/* Class = "UILabel"; text = "로그인 여부 확인"; ObjectID = "0sJ-IU-hOP"; */
+"0sJ-IU-hOP.text" = "로그인 여부 확인";
+
+/* Class = "UITextField"; placeholder = "아이디를 입력해주세요"; ObjectID = "B5F-Yz-JJG"; */
+"B5F-Yz-JJG.placeholder" = "Enter ID";
+
+/* Class = "UITextField"; placeholder = "비밀번호를 입력해주세요"; ObjectID = "OF2-Ui-FGS"; */
+"OF2-Ui-FGS.placeholder" = "Enter PW";
+
+/* Class = "UINavigationItem"; title = "로그인"; ObjectID = "Tmk-5B-m86"; */
+"Tmk-5B-m86.title" = "Login";
+
+/* Class = "UIButton"; configuration.title = "로그인"; ObjectID = "Voe-cZ-qA2"; */
+"Voe-cZ-qA2.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Voe-cZ-qA2"; */
+"Voe-cZ-qA2.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "사진검색"; ObjectID = "WJL-Db-tFr"; */
+"WJL-Db-tFr.title" = "사진검색";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "uHR-aQ-Mui"; */
+"uHR-aQ-Mui.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "xqG-oc-xMp"; */
+"xqG-oc-xMp.title" = "Item";
+
+"zcn-0g-Y8m.text" = "testLabelText";
