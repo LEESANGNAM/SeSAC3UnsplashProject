@@ -39,9 +39,20 @@ extension PhotoViewController: UITableViewDelegate, UITableViewDataSource{
         let data = viewModel.cellforRowAtdata(indexPath: indexPath)
         cell.backgroundColor = .brown
         cell.textLabel?.text = data.description
-        
-        
-        
+        if let url = URL(string:data.urls.thumb){
+            DispatchQueue.global().async {
+                do{
+                    let imageData = try Data(contentsOf: url)
+                    let image = UIImage(data: imageData)
+                    DispatchQueue.main.async {
+                        cell.imageView?.image = image
+                        cell.prepareForReuse()
+                    }
+                }catch{
+                    print("데이터 못받아옴~")
+                }
+            }
+        }
         return cell
     }
     
