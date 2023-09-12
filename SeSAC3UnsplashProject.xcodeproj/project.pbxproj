@@ -33,6 +33,9 @@
 		D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */; };
 		D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */; };
 		D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28A2AB0A8D600079CDA /* BaseView.swift */; };
+		D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28D2AB0B60D00079CDA /* NetflixLoginViewModel.swift */; };
+		D6ACF2902AB0B64000079CDA /* NetflixUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28F2AB0B64000079CDA /* NetflixUser.swift */; };
+		D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBackgroundButton.swift; sourceTree = "<group>"; };
 		D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixLoginView.swift; sourceTree = "<group>"; };
 		D6ACF28A2AB0A8D600079CDA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D6ACF28D2AB0B60D00079CDA /* NetflixLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixLoginViewModel.swift; sourceTree = "<group>"; };
+		D6ACF28F2AB0B64000079CDA /* NetflixUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixUser.swift; sourceTree = "<group>"; };
+		D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +157,12 @@
 		D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */ = {
 			isa = PBXGroup;
 			children = (
+				D6ACF2912AB0BA3100079CDA /* Enum */,
 				D6ACF28C2AB0B56C00079CDA /* Custom */,
+				D6ACF28F2AB0B64000079CDA /* NetflixUser.swift */,
 				D6ACF27E2AB0A34500079CDA /* NetflixLoginViewController.swift */,
 				D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */,
+				D6ACF28D2AB0B60D00079CDA /* NetflixLoginViewModel.swift */,
 			);
 			path = LoginNetflix;
 			sourceTree = "<group>";
@@ -173,6 +182,14 @@
 				D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		D6ACF2912AB0BA3100079CDA /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,12 +275,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63FA41D2AAEBAB800871FDE /* String+Extension.swift in Sources */,
+				D6ACF2902AB0B64000079CDA /* NetflixUser.swift in Sources */,
 				D63FA4002AAE992F00871FDE /* ViewController.swift in Sources */,
 				D63FA3FC2AAE992F00871FDE /* AppDelegate.swift in Sources */,
 				D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */,
 				D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */,
+				D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */,
 				D6ACF2842AB0A6DE00079CDA /* GrayBackgroundTextField.swift in Sources */,
 				D6ACF2742AB02A6100079CDA /* APIService.swift in Sources */,
+				D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */,
 				D6ACF2722AB02A4900079CDA /* Photo.swift in Sources */,
 				D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */,
 				D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */,
