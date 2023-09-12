@@ -151,9 +151,8 @@
 		D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */ = {
 			isa = PBXGroup;
 			children = (
+				D6ACF28C2AB0B56C00079CDA /* Custom */,
 				D6ACF27E2AB0A34500079CDA /* NetflixLoginViewController.swift */,
-				D6ACF2832AB0A6DE00079CDA /* GrayBackgroundTextField.swift */,
-				D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */,
 				D6ACF2872AB0A80D00079CDA /* NetflixLoginView.swift */,
 			);
 			path = LoginNetflix;
@@ -165,6 +164,15 @@
 				D6ACF28A2AB0A8D600079CDA /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D6ACF28C2AB0B56C00079CDA /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF2832AB0A6DE00079CDA /* GrayBackgroundTextField.swift */,
+				D6ACF2852AB0A6FE00079CDA /* WhiteBackgroundButton.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
