@@ -36,6 +36,14 @@
 		D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28D2AB0B60D00079CDA /* NetflixLoginViewModel.swift */; };
 		D6ACF2902AB0B64000079CDA /* NetflixUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF28F2AB0B64000079CDA /* NetflixUser.swift */; };
 		D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */; };
+		D6ACF2962AB139DF00079CDA /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2952AB139DF00079CDA /* CalculateViewController.swift */; };
+		D6ACF2982AB13AB200079CDA /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2972AB13AB200079CDA /* CalculateViewModel.swift */; };
+		D6ACF29A2AB13E0100079CDA /* sangnamObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2992AB13E0100079CDA /* sangnamObservable.swift */; };
+		D6ACF29D2AB1ACC100079CDA /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF29C2AB1ACC100079CDA /* LottoViewController.swift */; };
+		D6ACF29F2AB1AE6500079CDA /* LottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF29E2AB1AE6400079CDA /* LottoView.swift */; };
+		D6ACF2A12AB1AE7800079CDA /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2A02AB1AE7800079CDA /* LottoViewModel.swift */; };
+		D6ACF2A32AB1B02B00079CDA /* LottoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2A22AB1B02B00079CDA /* LottoAPIManager.swift */; };
+		D6ACF2A52AB1B11300079CDA /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2A42AB1B11300079CDA /* Lotto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +86,14 @@
 		D6ACF28D2AB0B60D00079CDA /* NetflixLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixLoginViewModel.swift; sourceTree = "<group>"; };
 		D6ACF28F2AB0B64000079CDA /* NetflixUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixUser.swift; sourceTree = "<group>"; };
 		D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		D6ACF2952AB139DF00079CDA /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		D6ACF2972AB13AB200079CDA /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		D6ACF2992AB13E0100079CDA /* sangnamObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sangnamObservable.swift; sourceTree = "<group>"; };
+		D6ACF29C2AB1ACC100079CDA /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		D6ACF29E2AB1AE6400079CDA /* LottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoView.swift; sourceTree = "<group>"; };
+		D6ACF2A02AB1AE7800079CDA /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		D6ACF2A22AB1B02B00079CDA /* LottoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIManager.swift; sourceTree = "<group>"; };
+		D6ACF2A42AB1B11300079CDA /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,8 @@
 		D63FA3FA2AAE992F00871FDE /* SeSAC3UnsplashProject */ = {
 			isa = PBXGroup;
 			children = (
+				D6ACF29B2AB1ACAD00079CDA /* Lotto */,
+				D6ACF2942AB139C100079CDA /* Calculate */,
 				D6ACF2892AB0A8C300079CDA /* Base */,
 				D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */,
 				D6ACF2702AB02A3F00079CDA /* Photo */,
@@ -190,6 +208,28 @@
 				D6ACF2922AB0BA4500079CDA /* TextFieldType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		D6ACF2942AB139C100079CDA /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF2952AB139DF00079CDA /* CalculateViewController.swift */,
+				D6ACF2972AB13AB200079CDA /* CalculateViewModel.swift */,
+				D6ACF2992AB13E0100079CDA /* sangnamObservable.swift */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+		D6ACF29B2AB1ACAD00079CDA /* Lotto */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF29C2AB1ACC100079CDA /* LottoViewController.swift */,
+				D6ACF29E2AB1AE6400079CDA /* LottoView.swift */,
+				D6ACF2A02AB1AE7800079CDA /* LottoViewModel.swift */,
+				D6ACF2A22AB1B02B00079CDA /* LottoAPIManager.swift */,
+				D6ACF2A42AB1B11300079CDA /* Lotto.swift */,
+			);
+			path = Lotto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63FA41D2AAEBAB800871FDE /* String+Extension.swift in Sources */,
+				D6ACF2A12AB1AE7800079CDA /* LottoViewModel.swift in Sources */,
 				D6ACF2902AB0B64000079CDA /* NetflixUser.swift in Sources */,
 				D63FA4002AAE992F00871FDE /* ViewController.swift in Sources */,
+				D6ACF2A32AB1B02B00079CDA /* LottoAPIManager.swift in Sources */,
 				D63FA3FC2AAE992F00871FDE /* AppDelegate.swift in Sources */,
+				D6ACF2A52AB1B11300079CDA /* Lotto.swift in Sources */,
 				D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */,
 				D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */,
 				D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */,
@@ -285,14 +328,19 @@
 				D6ACF2742AB02A6100079CDA /* APIService.swift in Sources */,
 				D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */,
 				D6ACF2722AB02A4900079CDA /* Photo.swift in Sources */,
+				D6ACF29D2AB1ACC100079CDA /* LottoViewController.swift in Sources */,
 				D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */,
 				D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */,
+				D6ACF29F2AB1AE6500079CDA /* LottoView.swift in Sources */,
+				D6ACF2982AB13AB200079CDA /* CalculateViewModel.swift in Sources */,
 				D63FA3FE2AAE992F00871FDE /* SceneDelegate.swift in Sources */,
 				D6ACF26D2AB0015600079CDA /* SampleViewModel.swift in Sources */,
 				D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */,
 				D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */,
+				D6ACF29A2AB13E0100079CDA /* sangnamObservable.swift in Sources */,
 				D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */,
 				D6ACF27F2AB0A34500079CDA /* NetflixLoginViewController.swift in Sources */,
+				D6ACF2962AB139DF00079CDA /* CalculateViewController.swift in Sources */,
 				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
 				D6ACF26F2AB00E4000079CDA /* LoginViewModel.swift in Sources */,
 				D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */,
