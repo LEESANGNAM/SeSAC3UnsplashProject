@@ -31,14 +31,23 @@ class HomeViewController: UIViewController {
         }
         cellRegisteration = UICollectionView.CellRegistration(handler: { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
-            content.textToSecondaryTextVerticalPadding = 50
+            
             content.imageToTextPadding = 20
             content.imageProperties.cornerRadius = 20
             content.imageProperties.maximumSize = CGSize(width: 100, height: 100)
+            
             content.textProperties.font = .boldSystemFont(ofSize: 30)
+            content.secondaryText = content.description
+            
+            content.textProperties.numberOfLines = 1
+            content.secondaryTextProperties.numberOfLines = 2
+            
+            content.textToSecondaryTextVerticalPadding = 50
             content.secondaryTextProperties.color = .blue
+            
             content.text = itemIdentifier.description ?? "설명없어요?"
             content.secondaryText = itemIdentifier.urls.thumb
+            
             
             if let url = URL(string:itemIdentifier.urls.thumb){
                 DispatchQueue.global().async {
@@ -77,7 +86,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.list.value.results?.count ?? 0
+        return viewModel.listCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

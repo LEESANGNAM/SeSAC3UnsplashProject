@@ -11,6 +11,9 @@ class HomeViewModel {
     
     var list = Observable(Photo(total: 0, total_pages: 0, results: []))
     
+    var listCount: Int{
+        return list.value.results?.count ?? 0
+    }
     
     func fetchPhoto(text: String) {
         APIService.shared.searchPhoto(query: text) { photo in
