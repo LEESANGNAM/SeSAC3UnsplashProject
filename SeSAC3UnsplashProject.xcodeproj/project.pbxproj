@@ -16,6 +16,15 @@
 		D63FA4172AAEAE2400871FDE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D63FA4192AAEAE2400871FDE /* Localizable.strings */; };
 		D63FA41D2AAEBAB800871FDE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FA41C2AAEBAB800871FDE /* String+Extension.swift */; };
 		D63FA4202AAEBDD600871FDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D63FA4222AAEBDD600871FDE /* InfoPlist.strings */; };
+		D6A25E8D2AB296FC00FB8FFE /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25E8C2AB296FC00FB8FFE /* SimpleTableViewController.swift */; };
+		D6A25E8F2AB2A02800FB8FFE /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25E8E2AB2A02800FB8FFE /* SimpleCollectionViewController.swift */; };
+		D6A25E952AB32BE400FB8FFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25E942AB32BE400FB8FFE /* HomeViewController.swift */; };
+		D6A25E982AB32C8C00FB8FFE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D6A25E972AB32C8C00FB8FFE /* Realm */; };
+		D6A25E9A2AB32C8C00FB8FFE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D6A25E992AB32C8C00FB8FFE /* RealmSwift */; };
+		D6A25E9D2AB32EB500FB8FFE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D6A25E9C2AB32EB500FB8FFE /* Kingfisher */; };
+		D6A25EA02AB32EF500FB8FFE /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25E9F2AB32EF500FB8FFE /* RealmModel.swift */; };
+		D6A25EA22AB32F3100FB8FFE /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EA12AB32F3100FB8FFE /* RealmRepository.swift */; };
+		D6A25EA42AB333B800FB8FFE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EA32AB333B800FB8FFE /* HomeViewModel.swift */; };
 		D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */; };
 		D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2682AAFF2FA00079CDA /* Observable.swift */; };
 		D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */; };
@@ -67,6 +76,12 @@
 		D63FA4212AAEBDD600871FDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D63FA4232AAEBDD800871FDE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D63FA4242AAEBDD900871FDE /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D6A25E8C2AB296FC00FB8FFE /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		D6A25E8E2AB2A02800FB8FFE /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
+		D6A25E942AB32BE400FB8FFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D6A25E9F2AB32EF500FB8FFE /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		D6A25EA12AB32F3100FB8FFE /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		D6A25EA32AB333B800FB8FFE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6ACF2682AAFF2FA00079CDA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A25E9D2AB32EB500FB8FFE /* Kingfisher in Frameworks */,
+				D6A25E9A2AB32C8C00FB8FFE /* RealmSwift in Frameworks */,
+				D6A25E982AB32C8C00FB8FFE /* Realm in Frameworks */,
 				D6ACF2822AB0A3D100079CDA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +145,10 @@
 		D63FA3FA2AAE992F00871FDE /* SeSAC3UnsplashProject */ = {
 			isa = PBXGroup;
 			children = (
+				D6A25EA62AB3345200FB8FFE /* Helper */,
+				D6A25EA52AB333C600FB8FFE /* NetWork */,
+				D6A25E9E2AB32ED100FB8FFE /* Realm */,
+				D6A25E8B2AB296EA00FB8FFE /* New */,
 				D6ACF29B2AB1ACAD00079CDA /* Lotto */,
 				D6ACF2942AB139C100079CDA /* Calculate */,
 				D6ACF2892AB0A8C300079CDA /* Base */,
@@ -149,12 +171,63 @@
 			path = SeSAC3UnsplashProject;
 			sourceTree = "<group>";
 		};
+		D6A25E8B2AB296EA00FB8FFE /* New */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25E932AB32BD200FB8FFE /* Home */,
+				D6A25E922AB32BB400FB8FFE /* NewListConfiguration */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		D6A25E922AB32BB400FB8FFE /* NewListConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25E8C2AB296FC00FB8FFE /* SimpleTableViewController.swift */,
+				D6A25E8E2AB2A02800FB8FFE /* SimpleCollectionViewController.swift */,
+			);
+			path = NewListConfiguration;
+			sourceTree = "<group>";
+		};
+		D6A25E932AB32BD200FB8FFE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25E942AB32BE400FB8FFE /* HomeViewController.swift */,
+				D6A25EA32AB333B800FB8FFE /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D6A25E9E2AB32ED100FB8FFE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25E9F2AB32EF500FB8FFE /* RealmModel.swift */,
+				D6A25EA12AB32F3100FB8FFE /* RealmRepository.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		D6A25EA52AB333C600FB8FFE /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF2732AB02A6100079CDA /* APIService.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		D6A25EA62AB3345200FB8FFE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D6ACF2682AAFF2FA00079CDA /* Observable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D6ACF2652AAFED4300079CDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */,
 				D6ACF26E2AB00E4000079CDA /* LoginViewModel.swift */,
-				D6ACF2682AAFF2FA00079CDA /* Observable.swift */,
 				D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */,
 				D6ACF26C2AB0015600079CDA /* SampleViewModel.swift */,
 			);
@@ -165,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				D6ACF2712AB02A4900079CDA /* Photo.swift */,
-				D6ACF2732AB02A6100079CDA /* APIService.swift */,
 				D6ACF2792AB02B5B00079CDA /* PhotoViewController.swift */,
 				D6ACF27B2AB02DAC00079CDA /* PhotoViewModel.swift */,
 			);
@@ -250,6 +322,9 @@
 			name = SeSAC3UnsplashProject;
 			packageProductDependencies = (
 				D6ACF2812AB0A3D100079CDA /* SnapKit */,
+				D6A25E972AB32C8C00FB8FFE /* Realm */,
+				D6A25E992AB32C8C00FB8FFE /* RealmSwift */,
+				D6A25E9C2AB32EB500FB8FFE /* Kingfisher */,
 			);
 			productName = SeSAC3UnsplashProject;
 			productReference = D63FA3F82AAE992F00871FDE /* SeSAC3UnsplashProject.app */;
@@ -283,6 +358,8 @@
 			mainGroup = D63FA3EF2AAE992F00871FDE;
 			packageReferences = (
 				D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D6A25E962AB32C8C00FB8FFE /* XCRemoteSwiftPackageReference "realm-swift" */,
+				D6A25E9B2AB32EB500FB8FFE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D63FA3F92AAE992F00871FDE /* Products */;
 			projectDirPath = "";
@@ -333,14 +410,20 @@
 				D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */,
 				D6ACF29F2AB1AE6500079CDA /* LottoView.swift in Sources */,
 				D6ACF2982AB13AB200079CDA /* CalculateViewModel.swift in Sources */,
+				D6A25EA42AB333B800FB8FFE /* HomeViewModel.swift in Sources */,
+				D6A25E8D2AB296FC00FB8FFE /* SimpleTableViewController.swift in Sources */,
+				D6A25E8F2AB2A02800FB8FFE /* SimpleCollectionViewController.swift in Sources */,
 				D63FA3FE2AAE992F00871FDE /* SceneDelegate.swift in Sources */,
 				D6ACF26D2AB0015600079CDA /* SampleViewModel.swift in Sources */,
 				D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */,
 				D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */,
+				D6A25EA22AB32F3100FB8FFE /* RealmRepository.swift in Sources */,
 				D6ACF29A2AB13E0100079CDA /* sangnamObservable.swift in Sources */,
 				D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */,
 				D6ACF27F2AB0A34500079CDA /* NetflixLoginViewController.swift in Sources */,
 				D6ACF2962AB139DF00079CDA /* CalculateViewController.swift in Sources */,
+				D6A25EA02AB32EF500FB8FFE /* RealmModel.swift in Sources */,
+				D6A25E952AB32BE400FB8FFE /* HomeViewController.swift in Sources */,
 				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
 				D6ACF26F2AB00E4000079CDA /* LoginViewModel.swift in Sources */,
 				D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */,
@@ -590,6 +673,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D6A25E962AB32C8C00FB8FFE /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D6A25E9B2AB32EB500FB8FFE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -601,6 +700,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D6A25E972AB32C8C00FB8FFE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6A25E962AB32C8C00FB8FFE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		D6A25E992AB32C8C00FB8FFE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6A25E962AB32C8C00FB8FFE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		D6A25E9C2AB32EB500FB8FFE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6A25E9B2AB32EB500FB8FFE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		D6ACF2812AB0A3D100079CDA /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D6ACF2802AB0A3D100079CDA /* XCRemoteSwiftPackageReference "SnapKit" */;
