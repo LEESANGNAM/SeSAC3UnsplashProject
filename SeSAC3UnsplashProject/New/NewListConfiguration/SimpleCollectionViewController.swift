@@ -8,28 +8,74 @@
 import UIKit
 import SnapKit
 class SimpleCollectionViewController: UIViewController {
+    
+    enum SectionType: Int,CaseIterable {
+        case first = 2000
+        case second = 2
+        case test = 3
+    }
     var list = [
         User(name: "Hue", age: 23),
+        User(name: "Hue", age: 23),
+        User(name: "Bran", age: 20),
+        User(name: "KoKojong", age: 20)
+    ]
+    var list2 = [
+        User(name: "Jack", age: 21),
         User(name: "Jack", age: 21),
         User(name: "Bran", age: 20),
         User(name: "KoKojong", age: 20)
     ]
-    var cellRegisteration: UICollectionView.CellRegistration<UICollectionViewListCell,User>!
+    
+    
+    //(cellForItemAt)
+//    var dataSource: UICollectionViewDiffableDataSource<SectionType,User>! // hashable 채택해라~
+    var dataSource: UICollectionViewDiffableDataSource<String,User>! // hashable 채택해라~
     
     var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        setCellRegisteration()
         
+//        var snapshot = NSDiffableDataSourceSnapshot<SectionType,User>()
+//        snapshot.appendSections(SectionType.allCases)
+//        snapshot.appendItems(list2, toSection: .first)
+//        snapshot.appendItems(list, toSection: .second)
+        var snapshot = NSDiffableDataSourceSnapshot<String,User>()
+        snapshot.appendSections(["고래밥","칙촉"])
+        snapshot.appendItems(list2, toSection: "고래밥")
+        snapshot.appendItems(list, toSection: "칙촉")
+        
+        
+//        snapshot.appendSections([0,1,2,3])
+//        snapshot.appendItems(list, toSection: 0)
+//        snapshot.appendItems(list2, toSection: 1)
+        
+        dataSource.apply(snapshot)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            let user = User(name: "sangnam", age: 24)
+//            self.list.append(user)
+            print("실행완료")
+            snapshot.appendItems([user], toSection: "고래밥")
+            self.dataSource.apply(snapshot)
+        }
+    }
+    
+    
+    private func setCellRegisteration(){
+//        var cellRegisteration: UICollectionView.CellRegistration! // collectionView.register
         // UICollectionView.CellRegistration : ios14, 제네릭 사용, 셀이 생성 될 때마다 클로저가 호출
-        cellRegisteration = UICollectionView.CellRegistration(handler: { cell, indexPath, itemIdentifier in
+       let cellRegisteration = UICollectionView.CellRegistration<UICollectionViewListCell,User>(handler: { cell, indexPath, itemIdentifier in
             
             //셀 디자인 및 데이터 처리
             var content =  UIListContentConfiguration.valueCell()
             content.text = itemIdentifier.name
-            content.textProperties.color = .systemPurple
-            content.secondaryText = "\(itemIdentifier.age)"
+            content.textProperties.color = .darkGray
+            content.textProperties.font = .boldSystemFont(ofSize: 20)
+            content.secondaryText = "\(itemIdentifier.age)살"
             content.image = UIImage(systemName: "star.fill")
             content.imageProperties.tintColor = .systemPink
             content.prefersSideBySideTextAndSecondaryText = false
@@ -44,11 +90,15 @@ class SimpleCollectionViewController: UIViewController {
             cell.backgroundConfiguration = backgroundConfig
         })
         
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegisteration , for: indexPath, item: itemIdentifier)
+            return cell
+        })
     }
+    
+    
     func setUpUI(){
         view.addSubview(collectionView)
-        collectionView.dataSource = self
-        collectionView.delegate = self
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -58,7 +108,7 @@ class SimpleCollectionViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         
     }
-    static func createLayout() -> UICollectionViewLayout {
+    static private func createLayout() -> UICollectionViewLayout {
         var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         configuration.showsSeparators = false
         configuration.backgroundColor = .systemGreen
@@ -67,15 +117,15 @@ class SimpleCollectionViewController: UIViewController {
     }
 }
 
-extension SimpleCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegisteration , for: indexPath, item: list[indexPath.item])
-        return cell
-    }
-    
-    
-}
+
+
+//extension SimpleCollectionViewController: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return list.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegisteration , for: indexPath, item: list[indexPath.item])
+//        return cell
+//    }
+//}

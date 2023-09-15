@@ -25,4 +25,9 @@ class HomeViewModel {
         }
     }
     
+    func getItem(index: IndexPath) -> PhotoResult?{
+        guard let datalist = list.value.results else { return nil}
+        return datalist[index.row]
+    }
+    
 }

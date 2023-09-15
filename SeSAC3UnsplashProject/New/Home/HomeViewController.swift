@@ -89,9 +89,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return viewModel.listCount
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let datalist = viewModel.list.value.results else { return UICollectionViewCell() }
-        let item = datalist[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        guard let item = viewModel.getItem(index: indexPath) else { return UICollectionViewCell()}
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegisteration, for: indexPath, item: item)
         //        cell.prepareForReuse()
         return cell

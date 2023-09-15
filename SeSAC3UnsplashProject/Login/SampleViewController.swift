@@ -7,11 +7,28 @@
 
 import UIKit
 
-struct User {
+class User: Hashable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    // 위에 두개의 메서드는 클래스에서 구현한다. 
+    
+    // Hashable 고유하다.
     let name: String
     let age: Int
+    
+    let id = UUID().uuidString
+    
     var text: String {
         return  "나는 \(name), \(age)살 "
+    }
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
     }
 }
 
