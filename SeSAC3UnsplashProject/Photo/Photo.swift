@@ -13,7 +13,14 @@ struct Photo: Codable {
     let results: [PhotoResult]?
 }
 
-struct PhotoResult: Codable {
+struct PhotoResult: Codable,Hashable {
+    static func == (lhs: PhotoResult, rhs: PhotoResult) -> Bool {
+        lhs.id == rhs.id
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let id: String
     let created_at: String
     let description: String?
