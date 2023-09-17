@@ -25,6 +25,10 @@
 		D6A25EA02AB32EF500FB8FFE /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25E9F2AB32EF500FB8FFE /* RealmModel.swift */; };
 		D6A25EA22AB32F3100FB8FFE /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EA12AB32F3100FB8FFE /* RealmRepository.swift */; };
 		D6A25EA42AB333B800FB8FFE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EA32AB333B800FB8FFE /* HomeViewModel.swift */; };
+		D6A25EAD2AB4C4A800FB8FFE /* Case1SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EAC2AB4C4A800FB8FFE /* Case1SettingViewController.swift */; };
+		D6A25EAF2AB5FD9800FB8FFE /* Case1Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EAE2AB5FD9800FB8FFE /* Case1Item.swift */; };
+		D6A25EB32AB60CFA00FB8FFE /* Case2Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB22AB60CFA00FB8FFE /* Case2Item.swift */; };
+		D6A25EB52AB6A52A00FB8FFE /* Case2SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */; };
 		D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */; };
 		D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2682AAFF2FA00079CDA /* Observable.swift */; };
 		D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */; };
@@ -82,6 +86,10 @@
 		D6A25E9F2AB32EF500FB8FFE /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		D6A25EA12AB32F3100FB8FFE /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		D6A25EA32AB333B800FB8FFE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D6A25EAC2AB4C4A800FB8FFE /* Case1SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case1SettingViewController.swift; sourceTree = "<group>"; };
+		D6A25EAE2AB5FD9800FB8FFE /* Case1Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case1Item.swift; sourceTree = "<group>"; };
+		D6A25EB22AB60CFA00FB8FFE /* Case2Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2Item.swift; sourceTree = "<group>"; };
+		D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2SettingViewController.swift; sourceTree = "<group>"; };
 		D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6ACF2682AAFF2FA00079CDA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 		D6A25E8B2AB296EA00FB8FFE /* New */ = {
 			isa = PBXGroup;
 			children = (
+				D6A25EA92AB4C48C00FB8FFE /* CaseSetting */,
 				D6A25E932AB32BD200FB8FFE /* Home */,
 				D6A25E922AB32BB400FB8FFE /* NewListConfiguration */,
 			);
@@ -221,6 +230,33 @@
 				D6ACF2682AAFF2FA00079CDA /* Observable.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D6A25EA92AB4C48C00FB8FFE /* CaseSetting */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25EB12AB60CBB00FB8FFE /* Case2 */,
+				D6A25EB02AB60CAC00FB8FFE /* Case1 */,
+			);
+			path = CaseSetting;
+			sourceTree = "<group>";
+		};
+		D6A25EB02AB60CAC00FB8FFE /* Case1 */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25EAC2AB4C4A800FB8FFE /* Case1SettingViewController.swift */,
+				D6A25EAE2AB5FD9800FB8FFE /* Case1Item.swift */,
+			);
+			path = Case1;
+			sourceTree = "<group>";
+		};
+		D6A25EB12AB60CBB00FB8FFE /* Case2 */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25EB22AB60CFA00FB8FFE /* Case2Item.swift */,
+				D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */,
+			);
+			path = Case2;
 			sourceTree = "<group>";
 		};
 		D6ACF2652AAFED4300079CDA /* Login */ = {
@@ -401,7 +437,9 @@
 				D6ACF2862AB0A6FE00079CDA /* WhiteBackgroundButton.swift in Sources */,
 				D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */,
 				D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */,
+				D6A25EAF2AB5FD9800FB8FFE /* Case1Item.swift in Sources */,
 				D6ACF2842AB0A6DE00079CDA /* GrayBackgroundTextField.swift in Sources */,
+				D6A25EB52AB6A52A00FB8FFE /* Case2SettingViewController.swift in Sources */,
 				D6ACF2742AB02A6100079CDA /* APIService.swift in Sources */,
 				D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */,
 				D6ACF2722AB02A4900079CDA /* Photo.swift in Sources */,
@@ -417,6 +455,7 @@
 				D6ACF26D2AB0015600079CDA /* SampleViewModel.swift in Sources */,
 				D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */,
 				D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */,
+				D6A25EB32AB60CFA00FB8FFE /* Case2Item.swift in Sources */,
 				D6A25EA22AB32F3100FB8FFE /* RealmRepository.swift in Sources */,
 				D6ACF29A2AB13E0100079CDA /* sangnamObservable.swift in Sources */,
 				D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */,
@@ -425,6 +464,7 @@
 				D6A25EA02AB32EF500FB8FFE /* RealmModel.swift in Sources */,
 				D6A25E952AB32BE400FB8FFE /* HomeViewController.swift in Sources */,
 				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
+				D6A25EAD2AB4C4A800FB8FFE /* Case1SettingViewController.swift in Sources */,
 				D6ACF26F2AB00E4000079CDA /* LoginViewModel.swift in Sources */,
 				D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */,
 			);
