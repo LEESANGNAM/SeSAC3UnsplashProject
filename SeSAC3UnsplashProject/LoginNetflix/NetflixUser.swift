@@ -12,6 +12,6 @@ struct NetflixUser{
     var pw: String
     var nickname: String
     var location: String
-    var code: Int
+    var code: String
     
 }

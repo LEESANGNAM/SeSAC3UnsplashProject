@@ -74,6 +74,17 @@ class NetflixLoginView: BaseView{
         return button
     }()
     
+    let resultLabel = {
+        let view = UILabel()
+        view.text = "회원가입 불가 텍스트 필드를 채워주세요"
+        view.numberOfLines = 0
+        view.backgroundColor = .blue
+        view.textColor = .white
+        view.textAlignment = .center
+        view.font = .boldSystemFont(ofSize: 20)
+        return view
+    }()
+    
     
     lazy var stackViewElementsList: [UIView] = [emailTextField,passwordTextField,nicknameTextField,locationTextField,codeTextField,signButton,infoView]
     
@@ -88,7 +99,7 @@ class NetflixLoginView: BaseView{
         setUpSignStackViewConstraint()
         setUpSignStackViewElementConstraint()
         addTitleLabel()
-        
+        addResultLabel()
     }
     
     
@@ -98,6 +109,14 @@ class NetflixLoginView: BaseView{
             make.centerX.equalToSuperview()
             make.top.equalTo(self.safeAreaLayoutGuide)
             make.bottom.greaterThanOrEqualTo(signStackView.snp.top).offset(-20)
+        }
+    }
+    func addResultLabel(){
+        addSubview(resultLabel)
+        resultLabel.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.top.equalTo(signStackView.snp.bottom).offset(20)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-10)
         }
     }
     

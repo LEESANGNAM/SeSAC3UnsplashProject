@@ -20,10 +20,12 @@ class NetflixLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.user.bind { user in
-//            print(user)
-//        }
+        viewModel.user.bind { user in
+            self.viewModel.checkUser()
+            self.mainView.resultLabel.text = self.viewModel.getValidMessage()
+        }
         viewModel.isValid.bind { bool in
+            self.mainView.signButton.isEnabled = bool
             self.mainView.signButton.setTitle( bool ? "회원가입" : "아직 회원가입 못함" , for: .normal)
             self.mainView.signButton.backgroundColor = bool ? .systemBlue : .systemYellow
         }
@@ -52,9 +54,9 @@ class NetflixLoginViewController: UIViewController {
         case .location:
             viewModel.user.value.location = mainView.locationTextField.text!
         case .code:
-            viewModel.user.value.code = Int(mainView.codeTextField.text!) ?? 0
+            viewModel.user.value.code = mainView.codeTextField.text!
         }
-        viewModel.checkUser()
+        
     }
     @objc func signUpButtonTapped(){
         if viewModel.getisValid() {
