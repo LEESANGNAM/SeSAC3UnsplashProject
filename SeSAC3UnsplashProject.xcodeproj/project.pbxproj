@@ -32,6 +32,9 @@
 		D6A25EB92AB7D34100FB8FFE /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB82AB7D34100FB8FFE /* NumberViewController.swift */; };
 		D6A25EBC2AB7D94D00FB8FFE /* NumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EBB2AB7D94D00FB8FFE /* NumberViewModel.swift */; };
 		D6A25EBE2AB7E7B600FB8FFE /* SimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EBD2AB7E7B600FB8FFE /* SimpleViewModel.swift */; };
+		D6A25EC12AB891A200FB8FFE /* RandomPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EC02AB891A200FB8FFE /* RandomPhoto.swift */; };
+		D6A25EC32AB8957200FB8FFE /* RandomPhtotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EC22AB8957200FB8FFE /* RandomPhtotoViewController.swift */; };
+		D6A25EC52AB8991700FB8FFE /* RandomPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EC42AB8991700FB8FFE /* RandomPhotoViewModel.swift */; };
 		D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */; };
 		D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2682AAFF2FA00079CDA /* Observable.swift */; };
 		D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */; };
@@ -96,6 +99,9 @@
 		D6A25EB82AB7D34100FB8FFE /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		D6A25EBB2AB7D94D00FB8FFE /* NumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewModel.swift; sourceTree = "<group>"; };
 		D6A25EBD2AB7E7B600FB8FFE /* SimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewModel.swift; sourceTree = "<group>"; };
+		D6A25EC02AB891A200FB8FFE /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
+		D6A25EC22AB8957200FB8FFE /* RandomPhtotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhtotoViewController.swift; sourceTree = "<group>"; };
+		D6A25EC42AB8991700FB8FFE /* RandomPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhotoViewModel.swift; sourceTree = "<group>"; };
 		D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6ACF2682AAFF2FA00079CDA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +282,16 @@
 			path = Number;
 			sourceTree = "<group>";
 		};
+		D6A25EBF2AB8919000FB8FFE /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25EC02AB891A200FB8FFE /* RandomPhoto.swift */,
+				D6A25EC22AB8957200FB8FFE /* RandomPhtotoViewController.swift */,
+				D6A25EC42AB8991700FB8FFE /* RandomPhotoViewModel.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
 		D6ACF2652AAFED4300079CDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +306,7 @@
 		D6ACF2702AB02A3F00079CDA /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				D6A25EBF2AB8919000FB8FFE /* Random */,
 				D6ACF2712AB02A4900079CDA /* Photo.swift */,
 				D6ACF2792AB02B5B00079CDA /* PhotoViewController.swift */,
 				D6ACF27B2AB02DAC00079CDA /* PhotoViewModel.swift */,
@@ -465,12 +482,14 @@
 				D6ACF29D2AB1ACC100079CDA /* LottoViewController.swift in Sources */,
 				D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */,
 				D6ACF2882AB0A80D00079CDA /* NetflixLoginView.swift in Sources */,
+				D6A25EC32AB8957200FB8FFE /* RandomPhtotoViewController.swift in Sources */,
 				D6ACF29F2AB1AE6500079CDA /* LottoView.swift in Sources */,
 				D6ACF2982AB13AB200079CDA /* CalculateViewModel.swift in Sources */,
 				D6A25EA42AB333B800FB8FFE /* HomeViewModel.swift in Sources */,
 				D6A25E8D2AB296FC00FB8FFE /* SimpleTableViewController.swift in Sources */,
 				D6A25E8F2AB2A02800FB8FFE /* SimpleCollectionViewController.swift in Sources */,
 				D63FA3FE2AAE992F00871FDE /* SceneDelegate.swift in Sources */,
+				D6A25EC12AB891A200FB8FFE /* RandomPhoto.swift in Sources */,
 				D6ACF26D2AB0015600079CDA /* SampleViewModel.swift in Sources */,
 				D6ACF27C2AB02DAC00079CDA /* PhotoViewModel.swift in Sources */,
 				D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */,
@@ -486,6 +505,7 @@
 				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
 				D6A25EAD2AB4C4A800FB8FFE /* Case1SettingViewController.swift in Sources */,
 				D6ACF26F2AB00E4000079CDA /* LoginViewModel.swift in Sources */,
+				D6A25EC52AB8991700FB8FFE /* RandomPhotoViewModel.swift in Sources */,
 				D6ACF27A2AB02B5B00079CDA /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
