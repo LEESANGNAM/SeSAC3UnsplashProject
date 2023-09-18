@@ -14,20 +14,8 @@ class SimpleCollectionViewController: UIViewController {
         case second = 2
         case test = 3
     }
-    var list = [
-        User(name: "Hue", age: 23),
-        User(name: "Hue", age: 23),
-        User(name: "Bran", age: 20),
-        User(name: "KoKojong", age: 20)
-    ]
-    var list2 = [
-        User(name: "Jack", age: 21),
-        User(name: "Jack", age: 21),
-        User(name: "Bran", age: 20),
-        User(name: "KoKojong", age: 20)
-    ]
-    
-    
+
+    var viewModel = SimpleViewModel()
     //(cellForItemAt)
 //    var dataSource: UICollectionViewDiffableDataSource<SectionType,User>! // hashable 채택해라~
     var dataSource: UICollectionViewDiffableDataSource<String,User>! // hashable 채택해라~
@@ -38,30 +26,49 @@ class SimpleCollectionViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         setCellRegisteration()
+        updateSnapShot()
+        collectionView.delegate = self
+        viewModel.list.bind { _ in
+            self.updateSnapShot()
+        }
+        
+        
         
 //        var snapshot = NSDiffableDataSourceSnapshot<SectionType,User>()
 //        snapshot.appendSections(SectionType.allCases)
 //        snapshot.appendItems(list2, toSection: .first)
 //        snapshot.appendItems(list, toSection: .second)
-        var snapshot = NSDiffableDataSourceSnapshot<String,User>()
-        snapshot.appendSections(["고래밥","칙촉"])
-        snapshot.appendItems(list2, toSection: "고래밥")
-        snapshot.appendItems(list, toSection: "칙촉")
         
         
 //        snapshot.appendSections([0,1,2,3])
 //        snapshot.appendItems(list, toSection: 0)
 //        snapshot.appendItems(list2, toSection: 1)
         
+        
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.viewModel.append()
+            self.updateSnapShot()
+        }
+//
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+//            let user = User(name: "sangnam", age: 24)
+////            self.list.append(user)
+//            print("실행완료")
+//            snapshot.appendItems([user], toSection: "고래밥")
+//            self.dataSource.apply(snapshot)
+//        }
+    }
+    
+    func updateSnapShot(){
+        var snapshot = NSDiffableDataSourceSnapshot<String,User>()
+        snapshot.appendSections(["고래밥","칙촉"])
+        snapshot.appendItems(viewModel.list2, toSection: "고래밥")
+        snapshot.appendItems(viewModel.list.value, toSection: "칙촉")
         dataSource.apply(snapshot)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-            let user = User(name: "sangnam", age: 24)
-//            self.list.append(user)
-            print("실행완료")
-            snapshot.appendItems([user], toSection: "고래밥")
-            self.dataSource.apply(snapshot)
-        }
     }
     
     
@@ -98,6 +105,9 @@ class SimpleCollectionViewController: UIViewController {
     
     
     func setUpUI(){
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -117,6 +127,26 @@ class SimpleCollectionViewController: UIViewController {
     }
 }
 
+extension SimpleCollectionViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.insertUser(name: searchBar.text)
+    }
+}
+
+extension SimpleCollectionViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+//        let user = viewModel.list.value[indexPath.item]
+        
+        guard let item = dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }// 아이템 가져오기
+        
+        dump(item)
+        
+//        viewModel.removeUser(idx: indexPath.item)
+    }
+}
 
 
 //extension SimpleCollectionViewController: UICollectionViewDataSource {

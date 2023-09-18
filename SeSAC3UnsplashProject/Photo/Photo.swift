@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Photo: Codable {
+struct Photo: Codable,Hashable {
     let total: Int
     let total_pages: Int
     let results: [PhotoResult]?
 }
 
 struct PhotoResult: Codable,Hashable {
-    static func == (lhs: PhotoResult, rhs: PhotoResult) -> Bool {
-        lhs.id == rhs.id
-    }
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
+//    static func == (lhs: PhotoResult, rhs: PhotoResult) -> Bool {
+//        lhs.id == rhs.id
+//    }
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(id)
+//    }
     
     let id: String
     let created_at: String
@@ -30,15 +30,15 @@ struct PhotoResult: Codable,Hashable {
     let user: PhotoUser
 }
 
-struct PhotoURL: Codable {
+struct PhotoURL: Codable,Hashable {
     let full: String
     let thumb: String
 }
 
-struct PhotoLink: Codable {
+struct PhotoLink: Codable,Hashable {
     let html: String
 }
 
-struct PhotoUser: Codable {
+struct PhotoUser: Codable,Hashable {
     let username: String
 }

@@ -16,13 +16,16 @@ class PhotoViewModel {
     func cellforRowAtdata(indexPath: IndexPath) -> PhotoResult{
         return list.value.results![indexPath.row]
     }
-    func fetchPhoto() {
-        APIService.shared.searchPhoto(query: "sky") { photo in
-            guard let data = photo else {
-                print("왜안나와")
-                return }
-            print(data)
-            self.list.value = data
+    func fetchPhoto(text: String) {
+        APIService.shared.searchPhoto(query: text) { photo in
+            
+            DispatchQueue.main.async {
+                guard let data = photo else {
+                    print("왜안나와")
+                    return }
+                print(data)
+                self.list.value = data
+            }
         }
     }
 }

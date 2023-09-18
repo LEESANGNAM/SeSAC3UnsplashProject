@@ -29,6 +29,9 @@
 		D6A25EAF2AB5FD9800FB8FFE /* Case1Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EAE2AB5FD9800FB8FFE /* Case1Item.swift */; };
 		D6A25EB32AB60CFA00FB8FFE /* Case2Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB22AB60CFA00FB8FFE /* Case2Item.swift */; };
 		D6A25EB52AB6A52A00FB8FFE /* Case2SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */; };
+		D6A25EB92AB7D34100FB8FFE /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EB82AB7D34100FB8FFE /* NumberViewController.swift */; };
+		D6A25EBC2AB7D94D00FB8FFE /* NumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EBB2AB7D94D00FB8FFE /* NumberViewModel.swift */; };
+		D6A25EBE2AB7E7B600FB8FFE /* SimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A25EBD2AB7E7B600FB8FFE /* SimpleViewModel.swift */; };
 		D6ACF2672AAFED5F00079CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */; };
 		D6ACF2692AAFF2FA00079CDA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF2682AAFF2FA00079CDA /* Observable.swift */; };
 		D6ACF26B2AAFFDF600079CDA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */; };
@@ -90,6 +93,9 @@
 		D6A25EAE2AB5FD9800FB8FFE /* Case1Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case1Item.swift; sourceTree = "<group>"; };
 		D6A25EB22AB60CFA00FB8FFE /* Case2Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2Item.swift; sourceTree = "<group>"; };
 		D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2SettingViewController.swift; sourceTree = "<group>"; };
+		D6A25EB82AB7D34100FB8FFE /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		D6A25EBB2AB7D94D00FB8FFE /* NumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewModel.swift; sourceTree = "<group>"; };
+		D6A25EBD2AB7E7B600FB8FFE /* SimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewModel.swift; sourceTree = "<group>"; };
 		D6ACF2662AAFED5F00079CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6ACF2682AAFF2FA00079CDA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D6ACF26A2AAFFDF600079CDA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 				D6ACF27D2AB0A2DC00079CDA /* LoginNetflix */,
 				D6ACF2702AB02A3F00079CDA /* Photo */,
 				D6ACF2652AAFED4300079CDA /* Login */,
+				D6A25EBA2AB7D92400FB8FFE /* Number */,
 				D63FA3FB2AAE992F00871FDE /* AppDelegate.swift */,
 				D63FA3FD2AAE992F00871FDE /* SceneDelegate.swift */,
 				D63FA3FF2AAE992F00871FDE /* ViewController.swift */,
@@ -194,6 +201,7 @@
 			children = (
 				D6A25E8C2AB296FC00FB8FFE /* SimpleTableViewController.swift */,
 				D6A25E8E2AB2A02800FB8FFE /* SimpleCollectionViewController.swift */,
+				D6A25EBD2AB7E7B600FB8FFE /* SimpleViewModel.swift */,
 			);
 			path = NewListConfiguration;
 			sourceTree = "<group>";
@@ -257,6 +265,15 @@
 				D6A25EB42AB6A52A00FB8FFE /* Case2SettingViewController.swift */,
 			);
 			path = Case2;
+			sourceTree = "<group>";
+		};
+		D6A25EBA2AB7D92400FB8FFE /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				D6A25EB82AB7D34100FB8FFE /* NumberViewController.swift */,
+				D6A25EBB2AB7D94D00FB8FFE /* NumberViewModel.swift */,
+			);
+			path = Number;
 			sourceTree = "<group>";
 		};
 		D6ACF2652AAFED4300079CDA /* Login */ = {
@@ -439,8 +456,10 @@
 				D6ACF28E2AB0B60D00079CDA /* NetflixLoginViewModel.swift in Sources */,
 				D6A25EAF2AB5FD9800FB8FFE /* Case1Item.swift in Sources */,
 				D6ACF2842AB0A6DE00079CDA /* GrayBackgroundTextField.swift in Sources */,
+				D6A25EBC2AB7D94D00FB8FFE /* NumberViewModel.swift in Sources */,
 				D6A25EB52AB6A52A00FB8FFE /* Case2SettingViewController.swift in Sources */,
 				D6ACF2742AB02A6100079CDA /* APIService.swift in Sources */,
+				D6A25EBE2AB7E7B600FB8FFE /* SimpleViewModel.swift in Sources */,
 				D6ACF2932AB0BA4500079CDA /* TextFieldType.swift in Sources */,
 				D6ACF2722AB02A4900079CDA /* Photo.swift in Sources */,
 				D6ACF29D2AB1ACC100079CDA /* LottoViewController.swift in Sources */,
@@ -461,6 +480,7 @@
 				D6ACF2782AB02ABE00079CDA /* APIKey.swift in Sources */,
 				D6ACF27F2AB0A34500079CDA /* NetflixLoginViewController.swift in Sources */,
 				D6ACF2962AB139DF00079CDA /* CalculateViewController.swift in Sources */,
+				D6A25EB92AB7D34100FB8FFE /* NumberViewController.swift in Sources */,
 				D6A25EA02AB32EF500FB8FFE /* RealmModel.swift in Sources */,
 				D6A25E952AB32BE400FB8FFE /* HomeViewController.swift in Sources */,
 				D6ACF28B2AB0A8D600079CDA /* BaseView.swift in Sources */,
